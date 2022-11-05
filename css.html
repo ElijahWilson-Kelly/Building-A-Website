@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building A Website: A how to guide</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/715d829499.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="css-page">
+      <div class="heading">
+        <h1>CSS</h1>
+        <h2>Time for some fashion</h2>
+        <img
+          class="skeleton"
+          src="./images/cool_frankenstein.png"
+          alt="a cool frankenstein"
+        />
+      </div>
+      <h3 id="getting-started">Getting Started</h3>
+      <p>
+        We now know how to get our information onto the page. But what if we
+        really want our website to express our uniqueness. For that we can use
+        CSS. CSS or Cascading StyleSheet is used to add flavor and styling to
+        our website. We do this by selecting HTML elements and adding various
+        styles to them. <br />
+        You can write CSS in your HTML file (within
+        <span class="red">style</span> tags) but it is generally recommended to
+        keep your CSS in a seperate file, in which case we have to link to it.
+        <br />
+        You can do that like so.
+      </p>
+      <div class="code-box">
+        <code class="html red">
+          &lt;link <span class="blue">rel</span>=<span class="green"
+            >"stylesheet"</span
+          >
+          <span class="blue">href</span>=<span class="green"
+            >"mystyle.css"</span
+          >
+          /&gt;</code
+        >
+      </div>
+      <p>
+        We put this tag into the <span class="red">head</span> tag in our html.
+        So with our link added our file will look like this.
+      </p>
+      <div class="code-box">
+        <code class="html red">
+          <div class="grey">&lt;!DOCTYPE <span class="red">html</span>&gt;</div>
+          &lt;html&gt;
+          <div class="indent">
+            &lt;head&gt;
+            <div class="indent">
+              &lt;link <span class="blue">rel</span>=<span class="green"
+                >"stylesheet"</span
+              >
+              <span class="blue">href</span>=<span class="green"
+                >"mystyle.css"</span
+              >
+              /&gt;
+            </div>
+            &lt;/head&gt;
+          </div>
+          <div class="indent">
+            &lt;body&gt;
+            <div class="indent">
+              &lt;h1&gt;<span class="white">My Awesome Website</span>&lt;/h1&gt;
+              <br />
+              &lt;p&gt;<span class="white"
+                >Welcome to my awesome website. Thanks for stopping in. I hope
+                you will enjoy yourself!</span
+              >&lt;/p&gt; <br />
+              &lt;h2&gt;<span class="white">My Favorite Films</span>&lt;/h2&gt;
+              <br />
+              &lt;ol&gt;<br />
+              <div class="indent">
+                &lt;li&gt;<span class="white">Lord of the Rings</span
+                >&lt;/li&gt;
+                <br />
+                &lt;li&gt;<span class="white">Star Wars</span>&lt;/li&gt; <br />
+                &lt;li&gt;<span class="white">Avatar</span>&lt;/li&gt;
+              </div>
+              &lt;/ol&gt; <br />
+              &lt;img <span class="blue">src</span>=<span class="green"
+                >"mycutecatphoto.png"</span
+              >
+              /&gt; <br />
+              &lt;p&gt;<span class="white"
+                >Thanks for checking out my page. You can </span
+              >&lt;a <span class="blue">href</span>=<span class="green"
+                >"www.contactme.com"</span
+              >
+              &gt;<span class="white">contact Me</span>&lt;/a&gt;<span
+                class="white"
+              >
+                if you have any questions</span
+              >&lt;/p&gt;
+            </div>
+            &lt;/body&gt;
+          </div>
+          &lt;/html&gt;
+        </code>
+      </div>
+      <p>
+        Awesome. Now we can move onto our
+        <span class="green">"mystyle.css"</span> file.
+      </p>
+      <h3 id="selectors">Selectors</h3>
+      <p>
+        Suppose we want our <code class="red">p</code> elements to be a little
+        bigger and maybe blue. One way we could do that is by selecting all the
+        <code class="red">p</code> elements in the document and apply some
+        styles to them all. To do this we write the element name (in this case
+        <span class="red">p</span>) followed by a set of curly brackets ({}). We
+        than add our styles inside the brackets by writing a
+        <span class="lightblue">property-name</span> followed by a (:) then a
+        <span class="orange">value</span> followed by a (;). Like so.
+      </p>
+      <div class="code-box">
+        <code
+          ><span class="red">p</span> {
+          <div class="indent">
+            <span class="lightblue">color</span>:
+            <span class="orange">blue</span>;
+            <br />
+            <span class="lightblue">font-size</span>:
+            <span class="orange">22px</span>;
+          </div>
+          }</code
+        >
+      </div>
+      <p>
+        We can also select every element with a certain
+        <span class="green">class</span>. To do this we write the
+        <span class="green">class</span> name with a period (.) before it.
+      </p>
+      <div class="code-box">
+        <code
+          ><span class="green">.red</span> {
+          <div class="indent">
+            <span class="lightblue">color</span>:
+            <span class="orange">red</span>;
+            <br />
+            <span class="lightblue">font-style</span>:
+            <span class="orange">italic</span>;
+          </div>
+          }</code
+        >
+      </div>
+      <p>
+        Or we can select an item by its individual <span class="blue">id</span>.
+        To do this we write the <span class="blue">id</span> name with a hashtag
+        (#) before it.
+      </p>
+      <div class="code-box">
+        <code
+          ><span class="blue">#submit-button</span> {
+          <div class="indent">
+            <span class="lightblue">height</span>:
+            <span class="orange">20px</span>;
+            <br />
+            <span class="lightblue">width</span>:
+            <span class="orange">60px</span>;
+          </div>
+          }</code
+        >
+      </div>
+      <h3 id="common-properties">Common Properties</h3>
+      <p>
+        There are many properties you can use to style your website and if you
+        are interested here is a
+        <a href="https://www.w3schools.com/cssref/index.php">resource</a> for
+        you to check out. But for now I will give you a few to get you started.
+      </p>
+      <p>
+        <code class="blue">color</code> - used to change the color of the text.
+        <br />
+        <code class="blue">font-family</code> - used to set the font of your
+        text.
+        <br />
+        <code class="blue">font-size</code> - used to change the size of the
+        text.
+        <br />
+        <code class="blue">background-color</code> - used to change the
+        background color of the element.
+        <br />
+        <code class="blue">border</code> - used to create a border around the
+        content.
+        <br />
+        <code class="blue">padding</code> - used to add space between the
+        content and the border.
+        <br />
+        <code class="blue">margin</code> - used to add space between the
+        selected element and other elements.
+        <br />
+        <code class="blue">width</code> - used to set the width of the element.
+        <br />
+        <code class="blue">height</code> - used to set the height of the
+        element.
+        <br />
+      </p>
+      <h3 id="box-model">Box Model</h3>
+      <p>
+        When it comes to positioning your elements on the page it is useful to
+        think of all your elements as being in a box. You have one box with your
+        <code class="blue">content</code> in it. Then around that we have
+        another box for some <code class="blue">padding</code>. Then we have a
+        box for the <code class="blue">border</code>. Then lastly we have a box
+        for the <code class="blue">margin</code>.
+      </p>
+      <div class="box-model">
+        <div class="border-box"></div>
+        <div class="padding-box"></div>
+        <div class="content-box"></div>
+        <p class="margin-label">margin</p>
+        <p class="border-label">border</p>
+        <p class="padding-label">padding</p>
+        <p class="content-label">content</p>
+      </div>
+
+      <p>
+        This is the end of my website. If you have any questions please feel
+        free to <a href="contact.html">contact me</a>.
+      </p>
+    </main>
+
+    <div class="left-arrow">
+      <a href="./html.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+    </div>
+    <div class="right-arrow">
+      <a href="./contact.html"
+        ><i class="fa-solid fa-circle-arrow-right"></i
+      ></a>
+    </div>
+    <footer>&copy; Elijah Wilson-Kelly</footer>
+  </body>
+</html>

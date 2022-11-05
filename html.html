@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building A Website: A how to guide</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/715d829499.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="html-page">
+      <div class="heading">
+        <h1>HTML</h1>
+        <h2>the skeleton of your website</h2>
+        <img class="skeleton" src="./images/skeleton.png" alt="a skeleton" />
+      </div>
+
+      <h3 id="getting-started">Getting Started</h3>
+      <p>
+        Before we start making a website we have to decide what kind of
+        information we want to display. Do we want a heading? maybe more than
+        one? maybe a few with different levels of importance? how about some
+        plain text and an image and if we are feeling really crazy a video as
+        well. To do this we need HTML. HTML or (HyperText Markup Language) is
+        used to structure our websites and can be thought of as the skeleton of
+        our website. It gives form and structure but can leave something to be
+        desired when it comes to the looks department. But we have to start
+        somewhere so let's write some HTML code.
+      </p>
+      <h3 id="elements">Elements</h3>
+      <p>
+        A good place to start is to give our page a heading. But not just any
+        heading, we want this heading to put all other headings on the page to
+        shame. What we want to do is wrap the text we want to show in a HTML
+        element. In this case an <code class="red">h1</code> element. To do this
+        we write it like so.
+      </p>
+      <div class="code-box">
+        <code class="html red">
+          &lt;h1&gt;<span class="white">My Awesome Website</span
+          >&lt;/h1&gt;</code
+        >
+      </div>
+
+      <p>
+        Those red items before and after the text are called "tags" and often,
+        as is the case here, come in pairs. To create an opening tag you first
+        write a less than sign (<code class="red">&lt;</code>) followed by the
+        element name (in this case <code class="red">h1</code>) followed by a
+        greater than sign (<code class="red">&gt;</code>).
+      </p>
+      <p>
+        Now if the element needs a closing tag you need to add that at the end.
+        The closing tag is the same as the opening tag just with a forward slash
+        (<code class="red">/</code>) before the element name. So it looks like
+        <code class="red">&lt;/h1&gt;</code>.
+      </p>
+      <p>
+        We don't just have to make headings. After all that would make a rather
+        boring website. We can also add paragraphs, images, quotes, videos and a
+        whole lot more.
+      </p>
+      <p>
+        Bellow are a few common element tags to get you started. There are many
+        more than these and if you are interested here is a
+        <a href="https://www.w3schools.com/TAGS/default.asp">resource</a> for
+        you to check out the whole list of options. But for now these will do.
+      </p>
+      <h3 id="common-tags">Common Tags</h3>
+      <p class="tags">
+        <code class="red">&lt;h1-h6&gt;&lt;/h1-h6&gt;</code> - The heading tags.
+        These are number from 1 to 6 from most important to least. It is
+        generally recommended to only use one <code class="red">h1</code> tag
+        per page <br />
+        <code class="red">&lt;p&gt;&lt;/p&gt;</code> - The paragraph tags. Used
+        for writing paragraphs. <br />
+        <code class="red">&lt;img /&gt;</code> - The image tag. This is a self
+        closing tag so does not need another tag to close it. Used to add images
+        to the site.<br />
+        <code class="red">&lt;a&gt;&lt;/a&gt;</code> - The anchor tags. Used to
+        link to other parts of the page or other websites. <br />
+        <code class="red">&lt;ul&gt;&lt;/ul&gt;</code> - The unordered list
+        tags. Used to wrap around <code class="red">li</code> elements to create
+        an unordered list.<br />
+        <code class="red">&lt;ol&gt;&lt;/ul&gt;</code> - The ordered list tags.
+        Used to wrap around <code class="red">li</code> elements to create an
+        ordered list.<br />
+        <code class="red">&lt;li&gt;&lt;/li&gt;</code> - The list item tags.
+        Used within either the <code class="red">ul</code> or
+        <code class="red">ol</code> elements to create a list item.<br />
+      </p>
+      <p>So now we are ready to add some more stuff to our website. Lets go.</p>
+      <div class="code-box">
+        <code class="html red">
+          &lt;h1&gt;<span class="white">My Awesome Website</span>&lt;/h1&gt;
+          <br />
+          &lt;p&gt;<span class="white"
+            >Welcome to my awesome website. Thanks for stopping in. I hope you
+            will enjoy yourself!</span
+          >&lt;/p&gt; <br />
+          &lt;h2&gt;<span class="white">My Favorite Films</span>&lt;/h2&gt;
+          <br />
+          &lt;ol&gt;<br />
+          <div class="indent">
+            &lt;li&gt;<span class="white">Lord of the Rings</span>&lt;/li&gt;
+            <br />
+            &lt;li&gt;<span class="white">Star Wars</span>&lt;/li&gt; <br />
+            &lt;li&gt;<span class="white">Avatar</span>&lt;/li&gt;
+          </div>
+          &lt;/ol&gt;
+        </code>
+      </div>
+      <p>
+        Well... I don't know about you but I think our website is really coming
+        along. But what if we want to add some images to really spice it up.
+        Well to do that we will have to learn about HTML attributes
+      </p>
+      <h3 id="attributes">Attributes</h3>
+      <p>
+        We can also add attributes to our HTML elements. We do this by adding a
+        name and value before the end of the opening tag. Like so
+      </p>
+      <div class="code-box">
+        <code class="html red"
+          >&lt;h1 <span class="blue">class</span>=<span class="green"
+            >"important"</span
+          >
+          &gt;<span class="white">I AM A HEADING!</span>&lt;/h1&gt;</code
+        >
+      </div>
+      <p>
+        Here we've added a class attribute of "important" to the
+        <code class="html red">h1</code> heading. (This will be super useful
+        when we start styling with CSS later on).
+      </p>
+      <p>
+        We can also add attributes to <code class="html red">img</code> and
+        <code class="html red">a</code> elements to allow us to use images and
+        link to other pages using the <span class="blue">src</span> and
+        <span class="blue">href</span> attributes respectivly
+      </p>
+      <div class="code-box">
+        <code class="html red"
+          >&lt;img <span class="blue">src</span>=<span class="green"
+            >"mycutecatphoto.png"</span
+          >
+          /&gt;</code
+        ><br />
+        <code class="html red"
+          >&lt;a <span class="blue">href</span>=<span class="green"
+            >"www.information.com"</span
+          >
+          &gt;<span class="white">More Info</span>&lt;/a&gt;</code
+        >
+      </div>
+
+      <p>So lets add some images and links to our website</p>
+
+      <div class="code-box">
+        <code class="html red">
+          &lt;h1&gt;<span class="white">My Awesome Website</span>&lt;/h1&gt;
+          <br />
+          &lt;p&gt;<span class="white"
+            >Welcome to my awesome website. Thanks for stopping in. I hope you
+            will enjoy yourself!</span
+          >&lt;/p&gt; <br />
+          &lt;h2&gt;<span class="white">My Favorite Films</span>&lt;/h2&gt;
+          <br />
+          &lt;ol&gt;<br />
+          <div class="indent">
+            &lt;li&gt;<span class="white">Lord of the Rings</span>&lt;/li&gt;
+            <br />
+            &lt;li&gt;<span class="white">Star Wars</span>&lt;/li&gt; <br />
+            &lt;li&gt;<span class="white">Avatar</span>&lt;/li&gt;
+          </div>
+          &lt;/ol&gt; <br />
+          &lt;img <span class="blue">src</span>=<span class="green"
+            >"mycutecatphoto.jpg"</span
+          >
+          /&gt; <br />
+          &lt;p&gt;<span class="white"
+            >Thanks for checking out my page. You can </span
+          >&lt;a <span class="blue">href</span>=<span class="green"
+            >"www.contactme.com"</span
+          >
+          &gt;<span class="white">contact me</span>&lt;/a&gt;<span
+            class="white"
+          >
+            if you have any questions</span
+          >&lt;/p&gt;
+        </code>
+      </div>
+      <p>
+        We also need to add a
+        <span class="grey">&lt;!DOCTYPE <span class="red">html</span>&gt;</span>
+        decleration at the top to let the computer know its an html file and a
+        <span class="red">html</span> tag with a
+        <span class="red">head</span> and <span class="red">body</span> tag
+        inside. All of the code we have written so far goes into the
+        <span class="red">body</span> tag.
+      </p>
+      <p>So after we have added everything our code will look like this.</p>
+
+      <div class="code-box">
+        <code class="html red">
+          <div class="grey">&lt;!DOCTYPE <span class="red">html</span>&gt;</div>
+          &lt;html&gt;
+          <div class="indent">&lt;head&gt;<br />&lt;/head&gt;</div>
+          <div class="indent">
+            &lt;body&gt;
+            <div class="indent">
+              &lt;h1&gt;<span class="white">My Awesome Website</span>&lt;/h1&gt;
+              <br />
+              &lt;p&gt;<span class="white"
+                >Welcome to my awesome website. Thanks for stopping in. I hope
+                you will enjoy yourself!</span
+              >&lt;/p&gt; <br />
+              &lt;h2&gt;<span class="white">My Favorite Films</span>&lt;/h2&gt;
+              <br />
+              &lt;ol&gt;<br />
+              <div class="indent">
+                &lt;li&gt;<span class="white">Lord of the Rings</span
+                >&lt;/li&gt;
+                <br />
+                &lt;li&gt;<span class="white">Star Wars</span>&lt;/li&gt; <br />
+                &lt;li&gt;<span class="white">Avatar</span>&lt;/li&gt;
+              </div>
+              &lt;/ol&gt; <br />
+              &lt;img <span class="blue">src</span>=<span class="green"
+                >"mycutecatphoto.jpg"</span
+              >
+              /&gt; <br />
+              &lt;p&gt;<span class="white"
+                >Thanks for checking out my page. You can </span
+              >&lt;a <span class="blue">href</span>=<span class="green"
+                >"www.contactme.com"</span
+              >
+              &gt;<span class="white">contact me</span>&lt;/a&gt;<span
+                class="white"
+              >
+                if you have any questions</span
+              >&lt;/p&gt;
+            </div>
+            &lt;/body&gt;
+          </div>
+          &lt;/html&gt;
+        </code>
+      </div>
+
+      <p>
+        Well i think that should do for now. Shall we have a look at how it
+        turned out?
+      </p>
+
+      <img
+        src="./images/htmlexample.png"
+        alt="screenshot of html"
+        class="html-example"
+      />
+
+      <p>
+        Hmmm..... It looks a bit boring. Maybe we should dress it up a little.
+        And to the rescue comes <a href="./css.html">CSS.</a>
+      </p>
+      <div class="left-arrow">
+        <a href="./introduction.html"
+          ><i class="fa-solid fa-circle-arrow-left"></i
+        ></a>
+      </div>
+      <div class="right-arrow">
+        <a href="./css.html"><i class="fa-solid fa-circle-arrow-right"></i></a>
+      </div>
+    </main>
+    <footer>&copy; Elijah Wilson-Kelly</footer>
+  </body>
+</html>
